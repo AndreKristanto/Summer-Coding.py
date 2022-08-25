@@ -1,0 +1,65 @@
+import math
+def adder(x, y):
+    return x + y
+def subtractor(x, y):
+    return x - y
+def multiplier(x, y):
+    return x * y
+def divider(x, y):
+    return x / y
+
+print("What u gonna do?")
+print("1.Adding")
+print("2.Subtracting")
+print("3.Multiplying")
+print("4.Dividing")
+print("Advance Math?")
+
+while True:
+    choice = input("so?: ")
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("what number: "))
+        num2 = float(input("with: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", adder(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtractor(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiplier(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divider(num1, num2))
+
+    elif choice in ("Adv"):
+        print("5. Univariate")
+        print("6. Square Root")
+        print("7. Absolute")
+
+        advchoice = input ("so so? ")
+
+        if advchoice in ('5', '6', '7'):
+
+            numadv = float(input("what number: "))
+
+            if advchoice == '5':
+                num5pow = float(input("of power: "))
+                print("Univarete ",numadv," to the tower of ",num5pow," is ",pow(numadv,num5pow))
+            
+            if advchoice == '6':
+                print("Square root of ",numadv," is ",math.sqrt(numadv))
+
+            if advchoice == '7':
+                print("Absolute of ",numadv," is ",abs(numadv))
+
+        next_calculation = input("need more? (please/no,thanks): ")
+        if next_calculation == "no,thanks":
+            print("pleasure!")
+            break
+        
+    else:
+        print("There's nothing like that in here!")
+    
